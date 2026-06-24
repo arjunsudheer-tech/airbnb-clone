@@ -7,6 +7,8 @@
   left: 0;
   right: 0;
   height: 100px;
+  z-index: 100;
+  padding: 0 40px;
   background-color: white;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -29,24 +31,74 @@
 .middle-section {
   display: flex;
   flex: 1;
-  justify-content: center;
-  align-items: center;
   max-width: 500px;
+  margin-right: 20px;
+  align-items: center;
 }
 
 .location-bar {
-  width: 0;
   flex: 1;
   height: 40px;
-  border: 1px solid rgb(195, 193, 193);
   font-size: 16px;
-  padding-left: 20px;
-  border-radius: 30px;
+  border-radius: 3px;
+  border: 1px solid rgb(195, 193, 193);
+  padding-left: 15px;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0;
 }
 
 .location-bar::placeholder {
+  font-family: Inter , Arial;
   font-size: 16px;
+}
+
+.search-button {
+  height: 45px;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1px;
+  background-color: rgb(245, 242, 242);
+  border: 1px solid rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: rgb(236, 233, 233);
+}
+
+.search-icon {
+  height: 30px;
+  cursor: pointer;
+}
+
+.search-button , .globe-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button .tooltip ,
+.globe-container .tooltip {
+  font-family: Inter , Arial;
+  position: absolute;
+  bottom: -30px;
+  background-color: rgb(255, 90, 95);
+  color: white;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.search-button:hover .tooltip ,
+.globe-container:hover .tooltip {
+  opacity: 1;
 }
 
 .right-section {
@@ -74,12 +126,4 @@
 .hamburger-icon {
   height: 30px;
   cursor: pointer;
-}
-
-.hamburger-button {
-  display: flex;
-  align-items: center;
-  border: 1px solid rgb(211, 209, 209);
-  border-radius: 30px;
-  padding: 8px 12px;
 }

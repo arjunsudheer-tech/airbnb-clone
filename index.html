@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/options.css">
   <link rel="stylesheet" href="styles/places.css">
+  <link rel="stylesheet" href="styles/footer.css">
   <title>Airbnb Clone</title>
 </head>
 <body>
@@ -20,13 +21,18 @@
     </div>
     <div class="middle-section">
       <input class="location-bar" type="text" placeholder="Location">
+      <button class="search-button">
+        <img class="search-icon" src="icons/search-icon.png" alt="search-icon">
+        <div class="tooltip">Search</div>
+      </button>
     </div>
     <div class="right-section">
       <p class="airbnb-text">Become a host</p>
-      <img class="globe-icon" src="icons/globe.png" alt="globe-icon">
-      <div class="hamburger-button">
-        <img class="hamburger-icon" src="icons/hamburger.png" alt="hamburger-icon">
+      <div class="globe-container">
+        <img class="globe-icon" src="icons/globe.png" alt="globe-icon">
+        <div class="tooltip">Region</div>
       </div>
+      <img class="hamburger-icon" src="icons/hamburger.png" alt="hamburger-icon">
     </div>
   </header>
   <main>
@@ -291,6 +297,51 @@
         </div>
       </div>
     </section>
+
+    <footer id="footer">
+      <div class="footer-grid">
+        <div class="footer-container">
+          <p class="footer-heading">Support</p>
+          <ul class="list-item-container">
+            <li>Help Centre</li>
+            <li>Get Help with a safety issue</li>
+            <li>AirCover</li>
+            <li>Anti-discrimination</li>
+            <li>Disability support</li>
+            <li>Cancellation options</li>
+            <li>Report neighbourhood concern</li>
+          </ul>
+        </div>
+        <div class="footer-container">
+          <p class="footer-heading">Hosting</p>
+          <ul class="list-item-container">
+            <li>Airbnb your home</li>
+            <li>Airbnb your experience</li>
+            <li>Airbnb your service</li>
+            <li>AirCover for Hosts</li>
+            <li>Hosting resources</li>
+            <li>Community forum</li>
+            <li>Hosting responsibly</li>
+            <li>Join a free hosting class</li>
+            <li>Find a co‑host</li>
+            <li>Refer a host</li>
+          </ul>
+        </div>
+        <div class="footer-container">
+          <p class="footer-heading">Airbnb</p>
+          <ul class="list-item-container">
+            <li>2026 Summer Release</li>
+            <li>Newsroom</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>Airbnb.org emergency stays</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Airbnb, Inc. &middot; Privacy &middot; Terms &middot; Company details</p>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
